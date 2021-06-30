@@ -1,0 +1,7 @@
+.singleList{
+    transform:scale(1);
+    transition: all .3s;
+}
+.singleList:hover{
+   transform: scale(1.1);
+}
