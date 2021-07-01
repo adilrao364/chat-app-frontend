@@ -1,53 +1,17 @@
-.container{max-width:1170px; margin:auto;}
 img{ max-width:100%;}
-.inbox_people {
-  background: #f8f8f8 none repeat scroll 0 0;
-  float: left;
-  overflow: hidden;
-  width: 40%; border-right:1px solid #c4c4c4;
+
+.incoming_msg{
+  margin-top: 1.5rem;
 }
-.inbox_msg {
-  border: 1px solid #c4c4c4;
-  clear: both;
-  overflow: hidden;
-}
-
-
-
-
-
-.chat_ib h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
-.chat_ib h5 span{ font-size:13px; float:right;}
-.chat_ib p{ font-size:14px; color:#989898; margin:auto}
-.chat_img {
-  float: left;
-  width: 11%;
-}
-.chat_ib {
-  float: left;
-  padding: 0 0 0 15px;
-  width: 88%;
-}
-
-.chat_people{ overflow:hidden; clear:both;}
-.chat_list {
-  border-bottom: 1px solid #c4c4c4;
-  margin: 0;
-  padding: 18px 16px 10px;
-}
-.inbox_chat { height: 550px; overflow-y: scroll;}
-
-.active_chat{ background:#ebebeb;}
-
 .incoming_msg_img {
   display: inline-block;
-  width: 6%;
+  width: 5%;
 }
 .received_msg {
   display: inline-block;
   padding: 0 0 0 10px;
   vertical-align: top;
-  width: 92%;
+  width:auto;
  }
  .received_withd_msg p {
   background: #ebebeb none repeat scroll 0 0;
@@ -55,8 +19,8 @@ img{ max-width:100%;}
   color: #646464;
   font-size: 14px;
   margin: 0;
-  padding: 5px 10px 5px 12px;
   width: 100%;
+  padding: 5px 10px 5px 12px;
 }
 .time_date {
   color: #747474;
@@ -64,7 +28,7 @@ img{ max-width:100%;}
   font-size: 12px;
   margin: 8px 0 0;
 }
-.received_withd_msg { width: 57%;}
+.received_withd_msg { width: auto;}
 .mesgs {
   float: left;
   padding: 30px 15px 0 25px;
@@ -79,18 +43,29 @@ img{ max-width:100%;}
   padding: 5px 10px 5px 12px;
   width:100%;
 }
-.outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
+.outgoing_msg{ 
+  overflow:hidden; 
+  margin:26px 0 26px;
+  width: auto;
+}
 .sent_msg {
   float: right;
-  width: 46%;
+  width: auto;
 }
 .input_msg_write input {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: medium none;
+  border: none;
   color: #4c4c4c;
   font-size: 15px;
   min-height: 48px;
-  width: 100%;
+  width: 90%;
+  outline:none;
+  padding-left: 5px;
+}
+
+.input_msg_write input:focus {
+  border: none;
+  outline:none;
 }
 
 .type_msg {border-top: 1px solid #c4c4c4;position: relative;}
@@ -109,6 +84,6 @@ img{ max-width:100%;}
 }
 .messaging { padding: 0 0 50px 0;}
 .msg_history {
-  height: 516px;
+  height: 660px;
   overflow-y: auto;
 }

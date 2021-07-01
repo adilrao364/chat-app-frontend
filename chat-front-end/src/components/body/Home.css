@@ -5,3 +5,6 @@
 .singleList:hover{
    transform: scale(1.1);
 }
+.scrollClass{
+    overflow-y: scroll;
+}
