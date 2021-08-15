@@ -1,15 +1,14 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./sidebar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
-import {sibarItemArray} from "./TabDataArray"
+import { sibarItemArray } from "./TabDataArray";
 
 function Sidebar() {
-
-  const [activeIndex, setActiveIndex] = useState(1)
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const activeTabs = (id) => {
-      setActiveIndex(id)
+    setActiveIndex(id);
   };
 
   return (
@@ -27,15 +26,25 @@ function Sidebar() {
           class="nav nav-pills nav-flush flex-column mb-auto text-center"
           style={{ marginTop: "12rem" }}
         >
-          {sibarItemArray.map((item, index) => {
-           const activeClass = activeIndex === item.id ? "active" : "inactive"
-           const activeColor = activeIndex === item.id ? "#FFF" : "#8895A7"
+          {sibarItemArray.map((item) => {
+            const activeClass =
+              item.id === activeIndex
+                ? "active"
+                : "inactive";
+            const activeColor =
+              item.id === activeIndex ? "#FFF" : "#8895A7";
             return (
-              <li class={`nav-item p-2 ${activeClass}`} onClick={()=>activeTabs(item.id)} key={item.id} style={{marginTop:"1rem", cursor:"pointer"}} data-tip={item.dataTip}>
-                <NavLink
-                  to={item.toRoute}
-                  class="py-3"
-                  aria-current="page"
+              <NavLink
+                to={item.toRoute}
+                aria-current="page"
+                className={`nav-item ${activeClass}`}
+                  onClick={() => activeTabs(item.id)}
+                  key={item.id}
+                  style={{ marginTop: "1rem", cursor: "pointer", height:"3.3rem" }}
+                  data-tip={item.dataTip}
+              >
+                <li
+                  class={`pt-3`}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -45,12 +54,13 @@ function Sidebar() {
                     fill="#8895A7"
                     class={item.classIcon}
                     viewBox="0 0 16 16"
+                    style={{ backgroundColor: "none" }}
                   >
                     <path d={item.svgPath1} />
                     <path d={item.svgPath2} />
                   </svg>
-                </NavLink>
-              </li>
+                </li>
+              </NavLink>
             );
           })}
         </ul>

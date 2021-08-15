@@ -4,6 +4,9 @@ import Profile from "../../images/adilgood.png";
 function OtherUserProfile() {
   return (
     <>
+      <h5 className="mb-4" style={{ color: "#8895A7" }}>
+        <b>You are chatting with</b>
+      </h5>
       <div
         style={{ backgroundColor: "#FFF" }}
         className="container mb-3 d-flex flex-column justify-content-between rounded p-3 align-items-center"

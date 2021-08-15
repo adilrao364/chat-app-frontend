@@ -10,7 +10,7 @@ function Header() {
       <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <div className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center align-items-center mb-md-0">
           <img src={Logo} alt="mdo" width="90" height="70" />
-          <h5 >
+          <h5 className="mt-3">
             super<i style={{fontWeight:"bold",color:"#05728F"}}>CHAT</i>
           </h5>
         </div>
@@ -42,6 +42,13 @@ function Header() {
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info">
               9<span className="visually-hidden">unread messages</span>
             </span>
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-info btn-sm"
+            style={{ marginRight: "1rem" }}
+          >
+            Logout
           </button>
 
           <div>

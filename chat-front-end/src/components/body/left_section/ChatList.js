@@ -4,6 +4,8 @@ import Searchbar from "./Searchbar";
 import Status from "./Status";
 import List from "./List";
 
+import { chatUserList} from "../../../UserArray.js"
+
 function ChatList() {
   return (
     <div>
@@ -23,7 +25,11 @@ function ChatList() {
         <h5 style={{ marginBottom: "1.2rem", color: "#8895A7" }}>
           <b>Recent Chats</b>
         </h5>
-        <List />
+        {chatUserList.map(user => {
+          return (
+            <List user={user} key={ user.id}/>
+          )
+        })}
       </div>
     </div>
   );
